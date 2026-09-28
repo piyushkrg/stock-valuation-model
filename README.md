@@ -1,184 +1,143 @@
-# stock-valuation-model
-DCF &amp; Comparable Company Valuation Model built in Excel
-## Project Progress
+# Pidilite Industries Ltd. — Stock Valuation Model
 
-### Day 1 — Historical Financial Analysis
+A professional DCF and Comparable Company Valuation model for Pidilite Industries Ltd., built in Excel.
 
-Completed the initial historical financial analysis for Pidilite Industries Ltd.
+## Project Overview
 
-#### Historical Analysis
-- Added historical Revenue data
-- Calculated Revenue Growth %
-- Added EBITDA
-- Calculated EBITDA Margin %
-- Added Depreciation & Amortisation
-- Calculated EBIT
-- Calculated EBIT Margin %
-- Added historical Tax
-- Calculated Tax Rate %
-- Added Profit After Tax (PAT)
-- Calculated PAT Margin %
+This project evaluates Pidilite Industries Ltd. using two primary valuation approaches:
 
-#### Initial Valuation Inputs
-- Added Revenue Growth assumption
-- Added EBITDA Margin assumption
-- Added Tax Rate assumption
+- Discounted Cash Flow (DCF)
+- Comparable Company Valuation
 
+The model includes historical financial analysis, operating forecasts, FCFF valuation, WACC/CAPM assumptions, terminal value analysis, sensitivity analysis, and peer-based valuation.
 
-### Day 2 — Working Capital & WACC
+## Workbook Structure
 
-Extended the historical analysis and built the initial valuation assumptions.
+| Sheet | Purpose |
+|---|---|
+| Inputs | Key operating and valuation assumptions |
+| Historicals | FY2022–FY2026 historical financial analysis |
+| Forecast | FY2027E–FY2031E operating forecast and FCFF |
+| DCF | DCF valuation, terminal value and sensitivity analysis |
+| Comps | Comparable-company valuation |
+| Output | Valuation summary and supporting analysis |
+| Dashboard | Executive valuation dashboard |
 
-#### Working Capital Analysis
-- Added historical Working Capital
-- Calculated Change in NWC
-- Calculated Change in NWC as % of Revenue
+## Valuation Methodology
 
-#### Capex & NWC Assumptions
-- Added Capex as % of Revenue assumption
-- Added Change in NWC as % of Revenue assumption
+### 1. Historical Analysis
 
-#### WACC & Valuation Assumptions
-- Added Risk-Free Rate
-- Added Beta
-- Added Market Return
-- Calculated Cost of Equity using CAPM
-- Calculated Cost of Debt
-- Calculated Debt %
-- Calculated Equity %
-- Added Market Capitalisation
-- Added Debt
-- Calculated Total Capital
-- Calculated WACC
-- Added Terminal Growth assumption
-### Day 3 — Forecast, DCF Valuation & Sensitivity Analysis
+Historical financial performance is analysed for FY2022–FY2026, including:
 
-Extended the historical financial model into a forward-looking valuation framework.
+- Revenue
+- Revenue growth
+- EBITDA
+- EBITDA margin
+- EBIT
+- EBIT margin
+- Tax rate
+- PAT
+- Working capital
+- Change in NWC
 
-#### 5-Year Forecast Model
-- Built a 5-year forecast for FY2027E–FY2031E
-- Forecasted Revenue using the Revenue Growth assumption
-- Calculated Revenue Growth %
-- Forecasted EBITDA using the EBITDA Margin assumption
-- Calculated EBITDA Margin %
-- Forecasted Depreciation & Amortisation using D&A as % of Revenue
-- Calculated EBIT
-- Applied the historical Tax Rate assumption
-- Calculated Tax
-- Calculated NOPAT (EBIT × (1 − Tax Rate))
-- Forecasted Capital Expenditure as % of Revenue
-- Forecasted Change in NWC as % of Revenue
-- Calculated Free Cash Flow to Firm (FCFF)
+### 2. Forecast
 
-#### DCF Valuation
-- Built a 5-year Discounted Cash Flow valuation
-- Calculated annual Discount Factors using WACC
-- Calculated Present Value of forecast FCFF
-- Calculated Terminal Value using the Gordon Growth Method
-- Calculated Present Value of Terminal Value
-- Calculated Enterprise Value
-- Calculated Net Debt using Debt less Cash & Bank
-- Calculated Equity Value
-- Added Shares Outstanding
-- Calculated Intrinsic Value per Share
-- Added the latest available market price used for valuation comparison
-- Calculated Upside / (Downside)
-- Added the valuation date for transparency and reproducibility
+The model forecasts FY2027E–FY2031E using key operating assumptions for:
 
-#### DCF Base Case Output
-- Enterprise Value: ₹48,925.91 Cr
-- Net Debt: ₹118.31 Cr
-- Equity Value: ₹48,807.60 Cr
-- Shares Outstanding: 101.7766 Cr
-- Intrinsic Value per Share: ₹479.56
-- Market Price Used: ₹1,517.20
-- Upside / (Downside): -68.39%
+- Revenue growth
+- EBITDA margin
+- D&A
+- Tax
+- Capex
+- Change in NWC
 
-#### Sensitivity Analysis
-- Built a two-way sensitivity analysis for Intrinsic Value per Share
-- Tested WACC across 8.75%–10.75%
-- Tested Terminal Growth across 4.0%–6.0%
-- Calculated valuation under 25 WACC / Terminal Growth combinations
-- Linked the base-case WACC and Terminal Growth directly to the DCF assumptions
-- Applied conditional formatting to visualize valuation sensitivity
+FCFF is calculated as:
 
-#### Sensitivity Range
-- Lowest Implied Value per Share: ₹345.95
-- Base Case Value per Share: ₹479.56
-- Highest Implied Value per Share: ₹805.93
-## Day 4 — Comparable Company Analysis & Output
+FCFF = EBIT × (1 − Tax Rate) + D&A − Capex − Change in NWC
 
-### Comparable Company Analysis
+### 3. DCF Valuation
 
-A comparable company analysis was performed to benchmark Pidilite Industries Ltd. against selected adhesive-related companies.
+The DCF uses:
 
-The selected peer companies are:
+- WACC: 9.75%
+- Terminal Growth: 5.00%
+- Forecast period: FY2027E–FY2031E
+
+Terminal value is calculated using the Gordon Growth Method.
+
+### 4. Comparable Company Valuation
+
+The peer set consists of:
 
 - Jyoti Resins
 - Nikhil Adhesives
 - HP Adhesives
 - Hindustan Adhesive
 
-The analysis uses two valuation multiples:
+The analysis uses:
 
 - P/E
 - EV/EBITDA
 
-### Peer Multiples
+Peer median multiples are applied to Pidilite's relevant financial metrics to derive implied valuation.
 
-| Company | P/E | EV/EBITDA |
-|---|---:|---:|
-| Jyoti Resins | 12.07x | 7.51x |
-| Nikhil Adhesives | 23.77x | 12.00x |
-| HP Adhesives | 24.37x | 14.49x |
-| Hindustan Adhesive | 11.19x | 7.01x |
-| **Peer Median** | **17.92x** | **9.76x** |
+## Key Valuation Outputs
 
-The peer median multiples are used to estimate Pidilite's implied valuation.
-
-For the P/E approach, the peer median P/E multiple is applied to Pidilite's earnings.
-
-For the EV/EBITDA approach, Enterprise Value is calculated using EBITDA multiplied by the peer median EV/EBITDA multiple. Net debt is then adjusted to arrive at implied equity value.
-
-The comparable-company data used in the model is based on the **04 September 2026** Value Research peer-comparison snapshot.
-
----
-
-### Output Analysis
-
-The Output sheet consolidates the valuation results from the DCF and comparable-company approaches.
-
-The current model produces the following implied values per share:
-
-| Valuation Method | Implied Value / Share |
+| Metric | Value |
 |---|---:|
-| DCF | ₹479.56 |
-| DCF Sensitivity — Low | ₹345.95 |
-| DCF Sensitivity — High | ₹805.93 |
-| P/E Comps | ₹431.19 |
-| EV/EBITDA Comps | ₹336.34 |
+| DCF Intrinsic Value / Share | ₹479.56 |
 | Current Market Price | ₹1,517.20 |
+| DCF Sensitivity Range | ₹345.95 – ₹805.93 |
+| P/E Implied Value / Share | ₹431.19 |
+| EV/EBITDA Implied Value / Share | ₹336.34 |
+| WACC | 9.75% |
+| Terminal Growth | 5.00% |
 
-The Output sheet also includes:
+## Data Sources
 
-- DCF valuation summary
-- Key valuation assumptions
-- DCF valuation details
-- Comparable-company valuation
-- Football-field valuation analysis
+Historical financial information:
+Pidilite Industries Ltd. Annual Reports and financial disclosures.
 
-The football-field analysis presents the valuation ranges generated by the different valuation approaches.
+Comparable-company data:
+Value Research peer comparison data, dated 04-Sep-2026.
 
----
+Risk-free rate:
+CCIL tenor-wise indicative yields.
 
-### Day 4 Completion
+Market return:
+Nifty 50 10-year annualised Price Return data.
 
-Completed:
+## Project Progress
 
-- Comparable Company Analysis
-- Peer selection and benchmarking
-- P/E and EV/EBITDA analysis
-- Peer median calculation
-- Implied Pidilite valuation
-- Consolidated Output sheet
-- Football-field valuation analysis
+### Day 1 — Historical Analysis
+- Historical financial data collected
+- FY2022–FY2026 historical analysis completed
+- Revenue, EBITDA, EBIT, PAT and working-capital metrics calculated
+
+### Day 2 — Forecast & DCF Foundations
+- Operating assumptions established
+- WACC/CAPM framework completed
+- Forecast model built
+- FCFF calculation completed
+
+### Day 3 — DCF Valuation
+- DCF valuation completed
+- Terminal value calculated
+- Enterprise value and equity value derived
+- DCF sensitivity analysis completed
+
+### Day 4 — Comparable Valuation & Output
+- Peer set established
+- P/E and EV/EBITDA multiples analysed
+- Peer median multiples calculated
+- Pidilite implied valuation completed
+- Output sheet completed
+
+### Final Stage — Dashboard & Presentation
+- Executive dashboard completed
+- Valuation summary and sensitivity visualisation completed
+- Workbook formatting and presentation layer finalised
+
+## Disclaimer
+
+This project is for educational and portfolio purposes only and does not constitute investment advice or a recommendation to buy or sell securities.
