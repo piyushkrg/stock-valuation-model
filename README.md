@@ -11,6 +11,10 @@ This project evaluates Pidilite Industries Ltd. using two primary valuation appr
 
 The model includes historical financial analysis, operating forecasts, FCFF valuation, WACC/CAPM assumptions, terminal value analysis, sensitivity analysis, and peer-based valuation.
 
+## Dashboard Preview
+
+![Dashboard Preview](dashboard.png)
+
 ## Workbook Structure
 
 | Sheet | Purpose |
