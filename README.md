@@ -13,7 +13,7 @@ The model includes historical financial analysis, operating forecasts, FCFF valu
 
 ## Dashboard Preview
 
-![Dashboard Preview](dashboard.png)
+![Dashboard Preview](screenshots/dashboard.png)
 
 ## Workbook Structure
 
